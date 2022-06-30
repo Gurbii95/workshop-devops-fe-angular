@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:docker": "ng build && docker build . -t workshop/angular && docker run -d -p 80:80 -v ~/Projects/Workshops/devops/workshop-devops-fe-angular/config:/usr/share/nginx/html/config workshop/angular",
+    "build:docker--all": "ng build && docker build . -t workshop/angular && docker-compose up",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -1,0 +1,15 @@
+version: '1.0'
+
+services:
+  frontend:
+    image: workshop/angular
+    volumes:
+      - "~/Projects/Workshops/devops/workshop-devops-fe-angular/config:/usr/share/nginx/html/config"
+    ports:
+      - "80:80"
+    depends_on:
+      - "backend"
+  backend:
+    image: workshop/backend
+    ports:
+      - "8080:8080"
