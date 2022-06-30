@@ -54,5 +54,5 @@ jobs:
         with:
           name: dist
           path: |
-          ./dist/workshop-devops-fe-angular
+          dist/workshop-devops-fe-angular
           retention-days: 1
