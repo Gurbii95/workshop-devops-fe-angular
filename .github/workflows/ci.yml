@@ -49,6 +49,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
+      - name: Upload artifacts
       - uses: actions/upload-artifact@v3
         with:
           name: dist
